@@ -25,5 +25,6 @@ while newDay > endofmonth
     endofmonth = get_end_of_month(year, month);
 end
 
+fprintf('계산된 날짜와 시간 : %d년 %d월 %d일 %d시\n', year, month, newDay, remainingHours);
 
          
