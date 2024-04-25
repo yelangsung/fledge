@@ -12,7 +12,7 @@ remainingHours = mod(totalHours, 24);
 
 %날짜에 일 수 추가 계산
 newDay = day + additionDays;
-endofmonth = end_of_month(year, month);
+endofmonth = get_end_of_month(year, month);
 
 
 while newDay > endofmonth 
@@ -22,7 +22,7 @@ while newDay > endofmonth
          month = 1;
          year = year + 1;
     end
-    endofmonth = end_of_month(year, month);
+    endofmonth = get_end_of_month(year, month);
 end
 
 fprintf('계산된 날짜와 시간 : %d년 %d월 %d일 %d시\n', year, month, newDay, remainingHours);
@@ -46,3 +46,5 @@ function end_of_month = get_end_of_month(year,month)
     end_of_month = days_in_month(month);
 end
 
+
+         
